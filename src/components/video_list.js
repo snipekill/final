@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import VideoList_item from './videolist_item';
 const VideoList=(props)=>{
     const videoListItem=props.videos.map((video)=>{
+
         return(
             <VideoList_item key={video.id.videoId} video={video}
             onVideoSelect={props.onVideoSelect}/>
@@ -10,12 +11,15 @@ const VideoList=(props)=>{
 
 
     });
+    const style1={
+        align:"right"
+    };
 
         return (
-            <div>
-                <ul>
+            <div style={style1}>
+
                     {videoListItem}
-                </ul>
+
             </div>
 
         );

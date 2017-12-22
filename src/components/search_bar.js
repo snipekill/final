@@ -12,6 +12,7 @@ class SearchBar extends Component {
         }
         props.onChangeSearchTerm(this.state.term);
 
+
     }
 
     onInputchange(term) {
@@ -22,8 +23,8 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div>
-                <input value={this.state.term} onChange={(event) => this.onInputchange(event.target.value)}/>
+            <div><br/>
+                <input  className={"form-control"} placeholder={"Search for..."} style={{width:"40em",marginLeft:"40px"}} value={this.state.term} onChange={(event) => this.onInputchange(event.target.value)}/>
             </div>
         );
     }

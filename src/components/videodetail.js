@@ -5,19 +5,34 @@ const VideoDetail=(props)=>{
             <p>loading....</p>
         );
     }
-    const url='https://www.youtube.com/embed/${props.video.id.videoId}'
+    const style={
+        width:"700px",
+        height:"100px",
+        borderRadius:"3%",
+        color:"black",
+        padding:"2px 2px 2px 2px",
+        margin:"20px 20px 20px 40px"
+    };
+    const style1={
+        width:"700px",
+        height:"350px",
+        opacity:"0.9",
+        padding:"2px 2px 2px 2px",
+        margin:"20px 20px 20px 40px",
+        borderRadius:"0px"
+    };
+    const url='https://www.youtube.com/embed/'+props.video.id.videoId;
     console.log("props"+props);
     return(
       <div>
           <div>
-              <iframe src={url}/>
+              <iframe  style={style1} allowFullScreen={"allowFullScreen"} src={url}/>
           </div>
-          <div>
-              <p>{props.video.snippet.title}</p>
+          <div style={style}>
+              <h2>{props.video.snippet.title}</h2>
+
           </div>
-          <div>
-              <p>{props.video.snippet.description}</p>
-          </div>
+
       </div>
     );
 }
