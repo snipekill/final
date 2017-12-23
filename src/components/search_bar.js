@@ -1,30 +1,30 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import YTSearch from 'youtube-api-search';
-
-const API_KEY = "AIzaSyD_UZQQV-OcpZyjL0ppWCLBGyFgqNpiytg";
 
 class SearchBar extends Component {
     constructor(props) {
         super(props);
-        this.state ={
+        this.state = {
             term: ''
-        }
-        props.onChangeSearchTerm(this.state.term);
+        };
+        props.onSearchTermChange(this.state.term);
 
 
     }
 
-    onInputchange(term) {
+    onInputChange(term) {
         console.log(term);
         this.setState({term});
-        this.props.onChangeSearchTerm(term);
+        this.props.onSearchTermChange(term);
     }
 
     render() {
         return (
             <div><br/>
-                <input  className={"form-control"} placeholder={"Search for..."} style={{width:"40em",marginLeft:"40px"}} value={this.state.term} onChange={(event) => this.onInputchange(event.target.value)}/>
+                <div className={"SearchStyle"}>
+                    <input className={"form-control"} placeholder={"Search for..."}
+                           value={this.state.term}
+                           onChange={(event) => this.onInputChange(event.target.value)}/>
+                </div>
             </div>
         );
     }

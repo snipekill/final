@@ -1,33 +1,26 @@
-.search-bar {
-    margin: 20px;
-    text-align: center;
+.SearchStyle {
+    width: 40em;
+    marginLeft: 40px;
 }
 
-.search-bar input {
-    width: 75%;
+.Style {
+    width: 700px;
+    height: 100px;
+    borderRadius: 3%;
+    color: black;
+    padding: 2px 2px 2px 2px;
+    margin: 20px 20px 20px 40px;
 }
 
-.video-item img {
-    max-width: 64px;
+.Style1 {
+    width: 700px;
+    height: 350px;
+    opacity: 0.9;
+    padding: 2px 2px 2px 2px;
+    margin: 20px 20px 20px 40px;
+    borderRadius: 0px;
 }
-
-.video-detail .details {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.list-group-item
+{
+    background-color: beige;
 }
-
-.list-group-item {
-    cursor: pointer;
-}
-
-.list-group-item:hover {
-    background-color: #eee;
-}
-
-
-
-
-
-
