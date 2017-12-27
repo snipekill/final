@@ -5,9 +5,11 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import YTSearch from 'youtube-api-search';
 import {API_KEY} from "./constants";
+import API from "./constants";
 
 import VideoDetail from './components/videodetail';
 import _ from 'lodash';
+API;
 
 class App extends Component {
     constructor(props) {
