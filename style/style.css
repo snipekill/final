@@ -24,3 +24,28 @@
 .list-group-item {
     background-color: beige;
 }
+.style{
+    border:2px solid black;
+    padding-top:20px;
+    padding-bottom: 20px;
+    margin-top:60px;
+}
+
+.styling{
+    padding-bottom: 10px;
+}
+
+.center{
+    text-align: center;
+    padding-bottom: 60px;
+
+}
+
+.submit{
+    margin-top: 40px;
+    margin-left: 480px;
+}
+
+.thick{
+    width:500px;
+}
