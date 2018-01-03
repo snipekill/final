@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-import NavBar from './navbar'
+import NavBar2 from './navbar2'
 import PersonDetails from './person_details';
 //import Graph from './components/graph';
 import SearchBar from './search_bar';
 import QuesList from './ques_list';
-
+import Footer from './footer';
 
 export default class LogPage extends Component {
     constructor(props) {
@@ -13,29 +13,27 @@ export default class LogPage extends Component {
         this.state = {
             tags: [],
         };
-        this.tagSearch=this.tagSearch.bind(this);
+        this.tagSearch = this.tagSearch.bind(this);
     }
 
     tagSearch(term) {
 
-            fetch('http://localhost:8000/questionslist/?tag='+term+'&numberq=15',
-                {
-                    method:"get",
-                    header:{
-                        "Content-type":"application/json"
-                    }
-                }).then(response=>{return response.json()}).then((data)=> {
-                     this.setState({tags:data});
-                     console.log(this.state.tags);
-                //console.log(data);
+        fetch('http://localhost:8000/questionslist/?tag=' + term + '&numberq=15',
+            {
+                method: "get",
+                header: {
+                    "Content-type": "application/json"
+                }
+            }).then(response => {
+            return response.json()
+        }).then((data) => {
+            this.setState({tags: data});
+            console.log(this.state.tags);
+            //console.log(data);
 
-            }).catch(function (err){
-                console.log((err));
-            });
-
-
-
-
+        }).catch(function (err) {
+            console.log((err));
+        });
 
 
     }
@@ -43,14 +41,16 @@ export default class LogPage extends Component {
 
     render() {
         return (
-            <div className="container1">
+
+            <div>
                 <br/>
 
                 <div>
-                    <NavBar/>
+                    <div>
+                        <NavBar2 person={JSON.parse(localStorage.getItem("user"))}/></div>
                 </div>
                 <br/>
-                <br/>
+                <br/><br/><br/><br/>
                 <div>
                     <PersonDetails person={JSON.parse(localStorage.getItem("user"))}/>
                 </div>
@@ -59,10 +59,13 @@ export default class LogPage extends Component {
 
                 </div>
                 {/*<div>*/}
-                    {/*<Graph/>*/}
+                {/*<Graph/>*/}
                 {/*</div>*/}
                 <div>
                     <QuesList questions={this.state.tags}/>
+                </div>
+                <div>
+                    <Footer/>
                 </div>
                 <br/>
             </div>
