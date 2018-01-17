@@ -4,15 +4,16 @@ import NavBar from "./navbar";
 import MainDisplay from "./main_display";
 import FeatureDisplay from "./features_display";
 import Footer from "./footer";
+import NavBAr from "./navbar3";
 
 export default class MainPage extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
+                <NavBAr/>
                 <MainDisplay/>
                 <FeatureDisplay/>
-                {/*<Footer className={"footer1"}/>*/}
+                <Footer/>
             </div>
         );
     }

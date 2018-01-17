@@ -1,4 +1,5 @@
 import React from 'react';
+import {browserHistory} from "react-router";
 
 export default class RegisterPage extends React.Component {
     onSubmit1() {
@@ -22,9 +23,10 @@ export default class RegisterPage extends React.Component {
             return response.json()
         }).then((data) => {
             console.log(data);
+            browserHistory.push("/");
         })
             .catch(function (error) {
-                console.log(error);
+                alert(error);
             });
     }
 

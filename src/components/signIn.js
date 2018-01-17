@@ -44,7 +44,12 @@ export default class SignPage extends React.Component {
                     </div>
                     <div className="col-md-12 styling">
                         <label className="col-md-6 color1">Password: </label>
-                        <input type="password" id="password" className="thick"/>
+                        <input type="password" id="password" className="thick"
+                               onKeyPress={(event)=>{
+                                   if(event.key==="Enter")
+                                   this.onSubmit1();
+                               }}
+                        />
                     </div>
                     <div>
                         <button type="button" className="submit" onClick={this.onSubmit1.bind(this)}>Sign In</button>

@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-import NavBar2 from './navbar2'
+import NavBar4 from './navbar4'
 import PersonDetails from './person_details';
 //import Graph from './components/graph';
 import SearchBar from './search_bar';
 import QuesList from './ques_list';
-import Footer from './footer';
+import Footer2 from './footer2';
 
 export default class LogPage extends Component {
     constructor(props) {
@@ -14,6 +14,7 @@ export default class LogPage extends Component {
             tags: [],
         };
         this.tagSearch = this.tagSearch.bind(this);
+        this.tagSearch("graphs");
     }
 
     tagSearch(term) {
@@ -47,13 +48,13 @@ export default class LogPage extends Component {
 
                 <div>
                     <div>
-                        <NavBar2 person={JSON.parse(localStorage.getItem("user"))}/></div>
+                        <NavBar4 person={JSON.parse(localStorage.getItem("user"))}/></div>
                 </div>
-                <br/>
-                <br/><br/><br/><br/>
                 <div>
                     <PersonDetails person={JSON.parse(localStorage.getItem("user"))}/>
+
                 </div>
+
                 <div className="">
                     <SearchBar onSearchTermChange={this.tagSearch.bind(this)}/>
 
@@ -61,13 +62,15 @@ export default class LogPage extends Component {
                 {/*<div>*/}
                 {/*<Graph/>*/}
                 {/*</div>*/}
+
                 <div>
                     <QuesList questions={this.state.tags}/>
                 </div>
-                <div>
-                    <Footer/>
-                </div>
+
                 <br/>
+                <div>
+                    <Footer2 className="foot"/>
+                </div>
             </div>
         );
     }

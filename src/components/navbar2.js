@@ -14,6 +14,7 @@ const NavBar2 = (props) => {
 
                             <NavItem className="displays">CodeConnect</NavItem>
 
+                            <NavItem className="displays">Apoorv</NavItem>
                             <Navbar.Toggle/>
 
                         </Nav>
@@ -46,6 +47,6 @@ const NavBar2 = (props) => {
             </Navbar>
         </div>
     );
-}
+};
 
 export default NavBar2;

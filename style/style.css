@@ -1,3 +1,7 @@
+.ButtoStyle {
+
+    margin-left: 40px;
+}
 .SearchStyle {
     width: 40em;
     marginLeft: 40px;
@@ -33,20 +37,32 @@
 .color2{
     color:#0a0f0f;
 }
+.padding{
+    padding-left: 10px;
+}
+.fill {
+    color: white;
+}
 .space2{
+
     margin-left:100px;
+    padding-left: 3px;
 }
 .space3{
     margin-left:56px;
+    padding-left: 3px;
 }
 .space4{
     margin-left:40px;
+    padding-left: 3px;
 }
 .space5{
     margin-left:40px;
+    padding-left: 3px;
 }
 .space6{
     margin-left:104px;
+    padding-left: 3px;
 }
 
 .size {
@@ -56,6 +72,7 @@
  li:hover{
  background-color:gray;
  }
+
 .style{
     background-image: url("/test/Frozen.jpg");
     border:2px solid black;
@@ -128,8 +145,8 @@ p{
 }
 
 
-footer{
-    position: absolute;
+.foot{
+    position:sticky;
     left:0;
     bottom:0;
     right:0;
